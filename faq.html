@@ -5,20 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hamburger Hotline FAQ</title>
 <style>
-  body { font-family: Comic Sans MS, Arial, sans-serif; max-width: 800px; margin: auto; padding: 50px; background: #fff0f5; }
-  h1, h2 { text-align: center; color: #ff4500; }
-  .faq-item {
-    background: #ffffe0; padding: 15px 20px; margin-bottom: 10px; border-radius: 12px; border: 2px dashed #ff69b4;
-  }
-  .faq-item p { margin: 5px 0 0; }
-  p.instructions { text-align: center; font-style: italic; color: #555; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7e600;
+  color: #111;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.faq {
+  padding: 40px 32px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.faq-item {
+  background: #fff;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #fff;
+}
 </style>
 </head>
 <body>
 
-<h1>🍔 Hamburger Hotline FAQ 🍔</h1>
+<nav>
+  <div>🍔 Hamburger Hotline 🍔</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+  </ul>
+</nav>
 
-<div class="faq-list">
+<section class="faq">
+  <h2>Absurd FAQ</h2>
   <div class="faq-item">
     <strong>Q: Can I eat the website?</strong>
     <p>A: Only if you like regret and crunchy pixels.</p>
@@ -28,17 +76,19 @@
     <p>A: Science hasn’t caught up yet. Possibly cursed.</p>
   </div>
   <div class="faq-item">
-    <strong>Q: Is ketchup the main condiment?</strong>
-    <p>A: No. Plastic water bottles are actually better. True story.</p>
+    <strong>Q: Are plastic water bottles really the best condiments?</strong>
+    <p>A: Absolutely. Don’t question it.</p>
   </div>
   <div class="faq-item">
     <strong>Q: Who runs Hamburger Hotline?</strong>
     <p>A: A council of sentient hamburgers. Don’t ask questions.</p>
   </div>
-</div>
+</section>
 
-<h2>Edit or Add FAQ</h2>
-<p class="instructions">Edit <code>faq.html</code> on GitHub to add more chaos and nonsense.</p>
+<footer>
+  &copy; 2026 Hamburger Hotline – Chaos Served Fresh
+</footer>
 
 </body>
 </html>
+
