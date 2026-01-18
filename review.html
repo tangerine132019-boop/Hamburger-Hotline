@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Hotline Reviews</title>
+<style>
+  body {
+    font-family: Comic Sans MS, Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+    background: #fffaf0;
+  }
+  h1, h2 { text-align: center; color: #ff4500; }
+  .reviews-list { margin-bottom: 30px; }
+  .review {
+    background: #ffffe0;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 2px dashed #ff69b4;
+  }
+  .stars { color: gold; font-size: 18px; }
+  textarea, input[type="text"], select {
+    width: 100%; padding: 10px; font-size: 16px; margin-top: 5px;
+    border-radius: 5px; border: 2px dotted #ff69b4;
+  }
+  button {
+    display: block; margin: 15px auto; padding: 12px 25px;
+    font-size: 16px; cursor: pointer;
+    background: #ff69b4; color: white; border: none; border-radius: 5px;
+    transition: background 0.3s;
+  }
+  button:hover { background: #ff1493; }
+  p.instructions { text-align: center; font-style: italic; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>🍔 Hamburger Hotline Reviews 🍔</h1>
+
+<div class="reviews-list">
+  <div class="review">
+    <strong>Patty McPattyface</strong> <span class="stars">★★★★★</span>
+    <p>The pickles were suspiciously crunchy, 11/10 would eat again.</p>
+  </div>
+  <div class="review">
+    <strong>Ketchup King</strong> <span class="stars">★★★☆☆</span>
+    <p>The bun had existential dread, but it paired well with soda.</p>
+  </div>
+  <div class="review">
+    <strong>Bunzilla</strong> <span class="stars">★☆☆☆☆</span>
+    <p>I asked for extra cheese, they gave me extra chaos instead.</p>
+  </div>
+</div>
+
+<h2>Add Your Review</h2>
+<p class="instructions">Edit this page anytime on GitHub to permanently mess with reality!</p>
+
+<input type="text" id="nameInput" placeholder="Your ridiculous name">
+<textarea id="reviewInput" placeholder="Write your absurd review here..."></textarea>
+<label for="starsInput">Rating (fake scale):</label>
+<select id="starsInput">
+  <option value="1">★☆☆☆☆</option>
+  <option value="2">★★☆☆☆</option>
+  <option value="3">★★★☆☆</option>
+  <option value="4">★★★★☆</option>
+  <option value="5" selected>★★★★★</option>
+</select>
+<button onclick="addReview()">Add Review</button>
+
+<script>
+function addReview() {
+  const name = document.getElementById('nameInput').value.trim() || "Anonymous Weirdo";
+  const text = document.getElementById('reviewInput').value.trim();
+  const stars = document.getElementById('starsInput').value;
+  if(!text) return alert("Write something absurd!");
+
+  const reviewDiv = document.createElement('div');
+  reviewDiv.className = "review";
+  reviewDiv.innerHTML = `<strong>${name}</strong> <span class="stars">${'★'.repeat(stars)+'☆'.repeat(5-stars)}</span><p>${text}</p>`;
+
+  document.querySelector('.reviews-list').appendChild(reviewDiv);
+
+  document.getElementById('nameInput').value = '';
+  document.getElementById('reviewInput').value = '';
+  document.getElementById('starsInput').value = 5;
+}
+</script>
+
+</body>
+</html>
