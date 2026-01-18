@@ -5,35 +5,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hamburger Hotline</title>
 <style>
-  body {
-    font-family: Comic Sans MS, Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background: #fff0f5;
-    color: #333;
-  }
-  h1 { margin-bottom: 10px; color: #ff1493; font-size: 3em; }
-  h2 { font-size: 1.3em; font-weight: normal; margin-bottom: 40px; color: #ff69b4; }
-  .button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 20px;
-    color: #fff;
-    background: #ff69b4;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: background 0.3s;
-  }
-  .button:hover { background: #ff1493; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7e600;
+  color: #111;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 80px 32px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero button {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  background: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.hero button:hover {
+  background: #ff69b4;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #fff;
+}
 </style>
 </head>
 <body>
-  <h1>🍔 Hamburger Hotline 🍔</h1>
-  <h2>"We make sure everything is FDA un-approved and plastic water bottles are the best condiments"</h2>
 
-  <a href="reviews.html" class="button">Reviews</a>
-  <a href="faq.html" class="button">FAQ</a>
+<nav>
+  <div>🍔 Hamburger Hotline 🍔</div>
+  <ul>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h2>"We make sure everything is FDA un-approved and plastic water bottles are the best condiments"</h2>
+  <button onclick="location.href='reviews.html'">Reviews</button>
+  <button onclick="location.href='faq.html'">FAQ</button>
+</section>
+
+<footer>
+  &copy; 2026 Hamburger Hotline – Chaos Served Fresh
+</footer>
+
 </body>
 </html>
 
